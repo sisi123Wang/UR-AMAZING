@@ -1,0 +1,79 @@
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+.feedback-green {
+    color: #4CAF50; /* Green color */
+}
+
+.feedback-pink {
+    color: #FFC0CB; /* Pink color */
+}
+
+#positive-plugin {
+    margin-bottom: 20px; /* Add some space between the form and the feedback */
+}
+
+.firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #ff5722;
+    border-radius: 50%;
+    animation: firework-animation 2s infinite;
+}
+
+#fireworks-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.firework-circle {
+    position: absolute;
+    border-radius: 50%;
+    animation: expand 1s ease-out forwards;
+    opacity: 0;
+}
+
+.flower-petal {
+    position: absolute;
+    width: 10px;
+    height: 30px; /* Increase the height for larger petals */
+    border-radius: 5px 5px 0 0; /* Rounded top */
+    background-color: #FFC0CB; /* Default pink color, will be overridden by JavaScript */
+    transform-origin: bottom center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.flower-center {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: yellow;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+}
+
+
+@keyframes expand {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
